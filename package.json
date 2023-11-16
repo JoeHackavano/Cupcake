@@ -16,7 +16,11 @@
     "release": "release-it",
     "changelog": "auto-changelog -p && git add CHANGELOG.md",
     "start": "gulp",
-    "precommit": "lint-staged && npm run lint"
+    "precommit": "lint-staged && npm run lint",
+    "ks:build": "knapsack --config ./knapsack/knapsack.config.js build",
+    "ks:start": "knapsack --config ./knapsack/knapsack.config.js start",
+    "ks:serve": "NODE_ENV=production knapsack --config ./knapsack/knapsack.config.js serve",
+    "ks:test": "knapsack --config ./knapsack/knapsack.config.js test"
   },
   "browserslist": [
     "> 2%",
@@ -59,6 +63,10 @@
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^22.0.0",
     "stylelint-declaration-strict-value": "^1.7.12",
-    "stylelint-scss": "^3.19.0"
+    "stylelint-scss": "^3.19.0",
+    "@knapsack/app": "^4.32.19",
+    "@knapsack/renderer-react": "^4.32.19",
+    "@knapsack/renderer-html": "^4.32.19",
+    "@knapsack/renderer-web-components": "^4.32.19"
   }
 }
